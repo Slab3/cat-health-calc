@@ -1,0 +1,161 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/*====================standard styles higher==================*/
+
+ul {padding: 0;}
+li {list-style: none}
+p, h1, h2, h3, h4, ul, body, button {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a, a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.flex-elem {display: flex;}
+.just-cont {justify-content: space-between;}
+.mx-auto {margin: 0 auto;}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    /*padding: 0 20px;*/
+}
+/*============================= FONTS ==============================*/
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+/*========================= HEADER =========================*/
+
+header {
+    background-color: #ffd28e;
+    background-image: url("../img/main-bckg-final.jpg"););
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #ff9d22;
+}
+
+.logo-cont {padding: 20px;}
+.logo {width: 70px;}
+.overlay-header {max-width: 330px;}
+
+.right-btm-header {
+    position: absolute;
+    width: 25%;
+    min-width: 250px;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    color: white;
+    text-align: right;
+    /*float: right;*/
+}
+
+.info-head-right {
+    margin-top: 210px;
+    margin-right: 10px;
+}
+
+/*========================= MAIN PAGE =========================*/
+
+.main-page {
+    padding: 40px 0 10px 0;
+    color: grey;
+}
+
+.left-main {
+    width: 35%;
+    min-width: 263px;
+    margin-right: 40px;
+}
+
+.thx-text {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+/*=============== FORM ===============*/
+
+.form {
+    width: 100%;
+}
+
+
+.form-item {
+    margin-top: 15px;
+} .form-item:first-child {margin-top: 0;}
+
+.form-control {  /* input */
+    height: 36px;
+    width: 65%;
+    min-width: 100px;
+    border: 2px solid #ff9d22;
+    border-radius: 4px;
+    padding: 0 7px;
+    float: right; /* робить так, що всі інпути на одній відстані від лейблів. на всю ширину блока*/
+} .form-control:hover {
+    border-color: red;
+}
+
+label { /* ====================== тут треба добавить клас, і задавать стилі класу... хотя */
+    line-height: 36px;
+}
+
+.button-form {
+    margin: 30px auto 0;
+    width: 100%;
+    min-width: 100px;
+}
+
+.btn {
+    height: 36px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #ff9d22;
+} .btn:hover {background-color: #e9901f;}
+
+
+
+
+
+
+
+
+/*========================= FOOTER =========================*/
+
+footer {
+    background-color: #ff9d22;
+    color: white;
+}
+
+.cat-health-info {
+    width: 75%;
+    padding: 20px 0;
+}
+.paragraph-info-footer {margin-bottom: 10px;}

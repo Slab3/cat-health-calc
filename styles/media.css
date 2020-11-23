@@ -1,0 +1,29 @@
+@media only screen and (max-width: 960px) {
+
+    /* make calc jumping on bottom form "left-text"*/
+    .main-page {
+        display: block;
+    }
+
+    .cat-health-info {
+        width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .cat-health-info {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    /*падінг коли до кнопки прилазять елементи форми*/
+    .button-form {
+        margin-top: 60px;
+    }
+
+    .container {
+        width: 85%;
+    }
+}
