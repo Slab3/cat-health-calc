@@ -36,64 +36,93 @@
     <div class="center-main form">                          <!-- Center Main -->
         <form class="" action="">
             <div class="form-item">
-                <label class="" for="InputCatName">Cat Name:
-                    <input type="text" class="form-control" id="InputCatName" name="InputCatName" value="Name">
+                <label class="" for="InputCatName">Ім'я кота:
+                    <input type="text" maxlength="35"class="form-control" id="InputCatName" name="InputCatName" value="Name">
                 </label>
             </div>
 
             <div class="form-item">
-                <label class="" for="InputCatWeight">Cat Weight:
-                    <input type="text" class="form-control" id="InputCatWeight" name="InputCatWeight"  value="Weight">
+                <label class="" for="InputCatSex">Стать:
+                    <select class="form-control" name="InputCatBreath" id="InputCatSex">
+                        <option value="sex1">Кіт</option>
+                        <option value="sex2">Кішка</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-item">
+                <label class="" for="InputCatWeight"
+                       title="Сама велика зафіксована вага кота - 21 кг">Вага:
+                    <input type="number" max="25" onkeypress="this.value=this.value.substring(0,1);"
+                           class="form-control" id="InputCatWeight" name="InputCatWeight">
                 </label>
             </div>
 
             <div class="form-item">
                 <label class="" for="InputCatLength"
-                       title="Максимальна зафіксована довжина кота - 123 см, це був Мейн-кун">Cat Length:
+                       title="Максимальна зафіксована довжина кота - 123 см, це був Мейн-кун">Довжина:
                     <input type="number" max="125" onkeypress="this.value=this.value.substring(0,2);"
-                           class="form-control" id="InputCatLength" name="InputCatLength" value="Length">
+                           class="form-control" id="InputCatLength" name="InputCatLength">
                 </label>
             </div>
 
             <div class="form-item">
-                <label class="" for="InputCatBirthday">Cat Birthday:
-                    <input type="date" class="form-control" id="InputCatBirthday" name="InputCatHeight" value="Birthday">
+                <label class="" for="InputCatBirthday">День народження:
+                    <input type="date" class="form-control" id="InputCatBirthday" name="InputCatHeight"
+                           min="1995-01-01" max="2020-11-24">
                 </label>
             </div>
 
-            <div class="form-item"> <!-- need to make dropdown here -->
-                <label class="" for="InputCatBreed">Weight category:
-                    <select class="form-control" name="InputCatBreed" id="InputCatBreed">
+            <div class="form-item">
+                <label class="" for="InputCatWeightCtgry">Вагова категорія:
+                    <select class="form-control" name="InputCatWeightCtgry" id="InputCatWeightCtgry">
                         <optgroup label="Категорія ваги кота: ">
-                            <option value="r1">Малий - Дворняга</option>
-                            <option value="r2">Середній - Британець/Шотландець</option>
-                            <option value="r3">Великий - Мейн-кун</option>
+                            <option value="wght_ctgry1">Малий - Дворняга</option>
+                            <option value="wght_ctgry2">Середній - Британець/Шотландець</option>
+                            <option value="wght_ctgry3">Великий - Мейн-кун</option>
                         </optgroup>
                     </select>
                 </label>
-<!--                <input type="text" class="form-control" id="InputCatBreed" name="InputCatBreed"  value="Breed">-->
             </div>
 
-            <div class="form-item"> <!-- need to make dropdown here -->
-                <label class="" for="InputCatNose">Cat Nose:
+            <div class="form-item">
+                <label class="" for="InputCatNose">Стан носу:
                     <select class="form-control" name="InputCatNose" id="InputCatNose">
-                        <option value="u1">Вологий</option>
-                        <option value="u2">Сухий</option>
+                        <option value="nose1">Вологий</option>
+                        <option value="nose2">Сухий</option>
                     </select>
                 </label>
-<!--                <input type="text" class="form-control" id="InputCatNose" name="InputCatNose"  value="Wet/Dry">-->
             </div>
 
-            <div class="form-item"> <!-- need to make dropdown here -->
-                <label class="" for="InputCatEars">Cat Ears:
+            <div class="form-item">
+                <label class="" for="InputCatEars">Стан вух:
                     <select class="form-control" name="InputCatEars" id="InputCatEars">
-                        <option value="e1">Холодні</option>
-                        <option value="e2">Гарячі</option>
+                        <option value="ears1">Холодні</option>
+                        <option value="ears2">Гарячі</option>
                     </select>
                 </label>
-<!--                <input type="text" class="form-control" id="InputCatEars1" name="InputCatEars"  value="Hot/Cold">-->
             </div>
 
+            <div class="form-item">
+                <label class="" for="InputCatBreath">Дихання:
+                    <select class="form-control" name="InputCatBreath" id="InputCatBreath">
+                        <option value="breath1">Спокійне</option>
+                        <option value="breath2">Ускладнене</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-item">
+                <label class="" for="InputCatDigestiveSystem">Травна система:
+                    <select class="form-control" name="InputCatDigestiveSystem" id="InputCatDigestiveSystem">
+                        <option value="digest_syst1">Все в порядку</option>
+                        <option value="digest_syst2">Є проблеми</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <!-- ===== ===== ===== calculate button ===== ===== ===== -->
             <div class="form-item button-form">
                 <button class="btn" id="ButtCalc">Calculate</button>
             </div>
@@ -102,7 +131,6 @@
 </section>
 
 
-<br> <!-- ------------------------------------------------------------------ NEED TO DELETE THIS <BR> -->
 <!--========================= FOOTER =========================-->
 
 <footer>

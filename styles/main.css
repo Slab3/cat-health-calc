@@ -126,7 +126,7 @@ label { /* ====================== тут треба добавить клас, �
 }
 
 .button-form {
-    margin: 30px auto 0;
+    margin: 30px auto 20px;
     width: 100%;
     min-width: 100px;
 }
@@ -141,9 +141,11 @@ label { /* ====================== тут треба добавить клас, �
 } .btn:hover {background-color: #e9901f;}
 
 
+/*========================= FUNCTIONS JS RESULT ==========================*/
 
-
-
+.result-elem {
+    text-align: center;
+}
 
 
 
