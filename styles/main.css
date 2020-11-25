@@ -65,7 +65,7 @@ header {
 
 .right-btm-header {
     position: absolute;
-    width: 25%;
+    width: 20%;
     min-width: 250px;
     bottom: 0;
     right: 0;
@@ -151,6 +151,10 @@ label { /* ====================== тут треба добавить клас, �
     width: 60%;
     margin: 0 auto;
     line-height: 28px;
+}
+
+.float-right-result {
+    float: right;
 }
 
 
