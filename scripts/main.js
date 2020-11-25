@@ -217,8 +217,8 @@ ButtCalc.onclick = function () {
     let weightResult;
 
 //-=-=-=- категорія БЕЗ ПОРОДИ (11 до 1) - 0 - MALE
-    if (gettingWeight || gettingLength == 0) {
-        weightResult = ' :/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    if (gettingWeight == 0 || gettingLength == 0) {
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
     } else if (gettingLength / gettingWeight <= 8.7 && gettingSex === 0 && gettingWeightCtgry === 0) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 8.7 && gettingLength / gettingWeight < 13.1 && gettingSex === 0 && gettingWeightCtgry === 0) {
@@ -297,7 +297,7 @@ ButtCalc.onclick = function () {
             'Також можлива серцева недостатність - при проблемах із серцем у тварини розвивається сильна задишка, кішка ' +
             'важко дихає животом та кашляє.'
     } else if (gettingNose === 1) {
-        physiologicalFeatures = physFtText + 'не в нормі. Сухість носової мочки може говорити про: переохолодження, ' +
+        physiologicalFeatures = physFtText + 'не в нормі. Сухість носової мочки може говорити про: переохолодження, перегрівання, ' +
             'звичайну хворобу(<i class="small-txt">зазвичай супроводжується сонливістю, прискореним, або ж уповільненим ' +
             'диханням, та гарячими вухами</i>), або ж наявністю внутрішніх патологій, але вони до того часу вже починають ' +
             'проявляти себе і з’являється клінічна картина того чи іншого захворювання.'
@@ -372,13 +372,10 @@ ButtCalc.onclick = function () {
     }
 
 
-
-    // document.write(gettingEars + gettingNose)
     alert('Зараз ви будете перенаправлені на сторінку результатів');
-
     // ----------------------------------------------------------------------------------: dropping result on page:
     document.body.innerHTML =
-        '<header>' +
+        '<header class="header-result">' +
         '   <div class="flex-elem ">' +
         '       <div class="logo-cont">' +
         '           <a href="index.html">' +
@@ -402,4 +399,5 @@ ButtCalc.onclick = function () {
         '</section>'
     ;
 };
+
 

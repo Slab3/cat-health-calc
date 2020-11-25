@@ -98,6 +98,8 @@ header {
     line-height: 30px;
 }
 
+
+
 /*=============== FORM ===============*/
 
 .form {
@@ -167,6 +169,10 @@ label { /* ====================== тут треба добавить клас, �
 
 .list-st {
     padding-left: 18px;
+}
+
+.header-result {
+    background-image: url("../img/IMG_20200922_003012.jpg");
 }
 
 
