@@ -11,94 +11,42 @@ ButtCalc.onclick = function () {
     let gettingDigestiveSystem = document.getElementById("InputCatDigestiveSystem").options.selectedIndex;
     let gettingBreath = document.getElementById("InputCatBreath").options.selectedIndex;
 
-    //getting text from inputs
-    let gettingEarsText = document.getElementById("InputCatEars").options[gettingEars].text;
-    // console.log(gettingEarsText);
-
-
-    // ===== ===== ===== if-else. for calculating
+    // testing variables && onclick button
     // ===== ===== ===== Name ===== ===== ===== ===== ===== =====-
-    // alert(gettingName);
+    console.log(gettingName);
 
-    // ===== ===== ===== cat sex ===== ===== ===== ===== ===== =====-
-    if (gettingSex === 0) {
-        // alert('1 sex');
-    } else {
-        // alert('2 sex');
-    }
+    // =====  cat sex=====-
+    if (gettingSex === 0) {console.log('1 sex');} else {console.log('2 sex');}
 
-    // ===== ===== ===== Weight ===== ===== ===== ===== ===== =====- weight
-    if (gettingWeight < 3) {
-        // alert('легесенький...');
-    }
+    // ===== Weight =====-
+    if (gettingWeight < 3) {console.log('легесенький...');}
 
-    // ===== ===== ===== Length ===== ===== ===== ===== ===== =====- length
-    if (gettingLength > 75) {
-        // alert('ого він довгий!');
-    }
+    // ===== Length =====-
+    if (gettingLength > 80) {console.log('ого котееее довгий!');}
 
     let lngth = 0;
+    if (gettingLength  > 120) {lngth = 6;} else if (gettingLength > 100) {lngth = 5;} else if (gettingLength > 80) {lngth = 4;} else if (gettingLength > 60) {lngth = 3;} else if (gettingLength > 40) {lngth = 2;} else if (gettingLength > 20) {lngth = 1;}
 
-    if (gettingLength  > 120) {
-        lngth = 6;
-    } else if (gettingLength > 100) {
-        lngth = 5;
-    } else if (gettingLength > 80) {
-        lngth = 4;
-    } else if (gettingLength > 60) {
-        lngth = 3;
-    } else if (gettingLength > 40) {
-        lngth = 2;
-    } else if (gettingLength > 20) {
-        lngth = 1;
-    }
+    // ===== birthday =====-
+    if (gettingBirthday < "2020-11-01") {console.log('вашому коту більше місяця...')}
 
+    // ===== weight category (getting selected Index) =====- weight category
+    if (gettingWeightCtgry === 0) {console.log('1 wgth ctgry');} else if (gettingWeightCtgry === 1) {console.log('2 wgth ctgry');} else {console.log('3 wgth ctgry');}
 
-    // ===== ===== ===== birthday ===== ===== ===== ===== ===== =====- birthday
-    if (gettingBirthday < "2020-11-01") {
-        // alert('вашому коту більше місяця...')
-    }
+    // ===== Nose =====- nose
+    if (gettingNose === 0) {console.log('1 nose');} else {console.log('2 nose');}
 
-    // ===== ===== ===== weight category (getting selected Index) ===== ===== ===== ===== ===== =====- weight category
-    if (gettingWeightCtgry === 0) {
-        // alert('1 wgth ctgry');
-    } else if (gettingWeightCtgry === 1) {
-        // alert('2 wgth ctgry');
-    } else {
-        // alert('3 wgth ctgry');
-    }
+    // ===== Ears =====- ears
+    if (gettingEars === 0) {console.log('1 ears');} else {console.log('2 ears');}
 
-    // ===== ===== ===== Nose ===== ===== ===== ===== ===== =====- nose
-    if (gettingNose === 0) {
-        // alert('1 nose');
-    } else {
-        // alert('2 nose');
-    }
+    // ===== Breath =====- breath
+    if (gettingBreath === 0) {console.log('1 breath');} else {console.log('2 breath');}
 
-    // ===== ===== ===== Ears ===== ===== ===== ===== ===== =====- ears
-    if (gettingEars === 0) {
-        // alert('1 ears');
-    } else {
-        // alert('2 ears');
-    }
-
-    // ===== ===== ===== Breath ===== ===== ===== ===== ===== =====- breath
-    if (gettingBreath === 0) {
-        // alert('1 breath');
-    } else {
-        // alert('2 breath');
-    }
-
-    // ===== ===== ===== Digestive System ===== ===== ===== ===== ===== =====- digestive system
-    if (gettingDigestiveSystem === 0) {
-        // alert('1 syst');
-    } else {
-        // alert('2 syst');
-    }
+    // ===== Digestive System =====- digestive system
+    if (gettingDigestiveSystem === 0) {console.log('1 syst');} else {console.log('2 syst');}
 
 
-    // setting text in variables for fastest work --------------============----------==========---- TEXT VARIABLES
-    //
+    // setting text in variables for quick send it into page generator
 
     // ---===--- BIG WEIGHT
     let bigWeightText = 'має проблеми з зайвою вагою. Постарайтесь більше вигулювати свого улюбленця. ' +  '<br>' +
@@ -110,7 +58,7 @@ ButtCalc.onclick = function () {
         'надмірною вагою менш активні, схильні пити менше води, і сечовипускання у них відбувається рідше ' +
         'порівняно зі здоровими особинами.' +
         '</p>' + '<br>' +
-        '<p>' + 'Коти з ожирінням мають набагато вищий ризик розвитку діабету: близько 80% із них мають цей стан, ' +
+        '<p>' + 'Коти з ожирінням <i class="small-txt">(>12кг на 50 см довжини)</i> мають набагато вищий ризик розвитку діабету: близько 80% із них мають цей стан, ' +
         'тобто потребують щоденних ін\'єкцій інсуліну. Часто розвиток діабету можна призупинити й покращити ' +
         'стан, якщо позбавити тварину зайвої ваги, оскільки вже не буде накопиченого жиру, який безпосередньо ' +
         'відповідає за нездатність регулювати рівень глюкози.' +
@@ -159,7 +107,7 @@ ButtCalc.onclick = function () {
         'оптимальної ваги, а це означає, що ви маєте відстежувати їх ріст і коригувати раціон відповідно до їхніх потреб.' +
         '</p>';
 
-    // ---===--- NORMAL WEIGHT
+    // ---===--- SMALL WEIGHT
     let smallWeightText = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
         ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.' + '<br>' +
         '<p>' + 'Якщо кіт утратив вагу через хворобу, важливо не перевантажувати його травну систему під час ' +
@@ -188,7 +136,7 @@ ButtCalc.onclick = function () {
 
 
 
-    // ========------------------=-=-==-=-=- =-=-=-=-=-=-=- text if cat older than 8 years
+    // ========-----=-=- =-=-=----- if cat older than 8 years
     let catMore8Years;
     let catSexForBirthday;
 
@@ -200,7 +148,7 @@ ButtCalc.onclick = function () {
     }
 
     // text if catMore8Years
-    if (gettingBirthday == 0) {
+    if (gettingBirthday === '') { // there can be ... == 0
         catMore8Years = '';
         gettingBirthday = '<u class="small-txt">Ви не вказали ' + '<i>дату народження.</i></u>'
     } else if (gettingBirthday <= "2012-11-01") {
@@ -212,12 +160,16 @@ ButtCalc.onclick = function () {
     }
 
 
+    //=== --- === ----- ===== checking for content in name
+    if (gettingName === '') {
+        gettingName = 'Ви не вказали ім\'я...'
+    }
 
-    // ======================= ------------------------ calculating:
+    // ============== --------------- calculating:
     let weightResult;
 
-//-=-=-=- категорія БЕЗ ПОРОДИ (11 до 1) - 0 - MALE
-    if (gettingWeight == 0 || gettingLength == 0) {
+//-=-=-=- YARD category (11 до 1) - 0 - MALE
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
         weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
     } else if (gettingLength / gettingWeight <= 8.7 && gettingSex === 0 && gettingWeightCtgry === 0) {
         weightResult = bigWeightText; // =========================================================== big weight
@@ -227,7 +179,9 @@ ButtCalc.onclick = function () {
         weightResult = smallWeightText; // =========================================================== small weight
     }
 //-=-=-=- 0 - FEMALE
-    if (gettingLength / gettingWeight <= 9 && gettingSex === 1 && gettingWeightCtgry === 0) {
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    } else if (gettingLength / gettingWeight <= 9 && gettingSex === 1 && gettingWeightCtgry === 0) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 9 && gettingLength / gettingWeight < 13.4 && gettingSex === 1 && gettingWeightCtgry === 0) {
         weightResult = normalWeightText; // =========================================================== normal weight
@@ -235,8 +189,10 @@ ButtCalc.onclick = function () {
         weightResult = smallWeightText; // =========================================================== small weight
     }
 
-//-=-=-=- категорія БРИТАНЦІ/ШОТЛАНДЦІ (10 до 1) - 1 - MALE
-    if (gettingLength / gettingWeight <= 8 && gettingSex === 0 && gettingWeightCtgry === 1) {
+//-=-=-=- category BRITISH / SCOTTISH (10sm to 1 kg) - 1 - MALE
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    } else if (gettingLength / gettingWeight <= 8 && gettingSex === 0 && gettingWeightCtgry === 1) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 8 && gettingLength / gettingWeight < 12.3 && gettingSex === 0 && gettingWeightCtgry === 1) {
         weightResult = normalWeightText; // =========================================================== normal weight
@@ -244,15 +200,19 @@ ButtCalc.onclick = function () {
         weightResult = smallWeightText; // =========================================================== small weight
     }
 //-=-=-=- 1 - FEMALE
-    if (gettingLength / gettingWeight <= 8.3 && gettingSex === 1 && gettingWeightCtgry === 1) {
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    } else if (gettingLength / gettingWeight <= 8.3 && gettingSex === 1 && gettingWeightCtgry === 1) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 8.3 && gettingLength / gettingWeight < 12.6 && gettingSex === 1 && gettingWeightCtgry === 1) {
         weightResult = normalWeightText; // =========================================================== normal weight
     } else if (gettingLength / gettingWeight > 12.6 && gettingSex === 1 && gettingWeightCtgry === 1) {
         weightResult = smallWeightText; // =========================================================== small weight
     }
-//-=-=-=- категорія Великі - Мейн-кун... (7 до 1) - 2 - MALE
-    if (gettingLength / gettingWeight <= 6 && gettingSex === 0 && gettingWeightCtgry === 2) {
+//-=-=-=- category BIG - MAINE COON ... (7sm to 1 kg) - 2 - MALE
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    } else if (gettingLength / gettingWeight <= 6 && gettingSex === 0 && gettingWeightCtgry === 2) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 6 && gettingLength / gettingWeight < 9 && gettingSex === 0 && gettingWeightCtgry === 2) {
         weightResult = normalWeightText; // =========================================================== normal weight
@@ -260,7 +220,9 @@ ButtCalc.onclick = function () {
         weightResult = smallWeightText; // =========================================================== small weight
     }
 //-=-=-=- 2 - FEMALE
-    if (gettingLength / gettingWeight <= 6.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
+    if (gettingWeight === '' || gettingLength === '') {  //there can be ... ==
+        weightResult = ':/ ви не вказали обов\'язковий параметр ' + '<i>Вага / Довжина кота.</i>'
+    } else if (gettingLength / gettingWeight <= 6.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
         weightResult = bigWeightText; // =========================================================== big weight
     } else if (gettingLength / gettingWeight > 6.3 && gettingLength / gettingWeight < 9.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
         weightResult = normalWeightText; // =========================================================== normal weight
@@ -270,7 +232,7 @@ ButtCalc.onclick = function () {
 
 
 
-    // === === --- --- === === --- --- === === --- --- nose, ears, breathe, dig. system:
+    // === === --- --- calculating nose, ears, breathe, dig. system:
     let physiologicalFeatures;
     let physFtText = '<b>Фізіологічні особливості кота </b>';
 
@@ -339,7 +301,6 @@ ButtCalc.onclick = function () {
     if (gettingSex === 0) {
         catNecat = ' кота '
     } else {catNecat = ' кішки '}
-
 
     if (gettingDigestiveSystem === 1 && gettingWeightCtgry === 2) {
         digSystRes = '<b>Травлення: </b>' + 'Кота, що страждає на блювоту і діарею, слід завжди обстежувати, ' +

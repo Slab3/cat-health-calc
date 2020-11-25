@@ -114,7 +114,7 @@ header {
 .form-control {  /* input */
     height: 36px;
     width: 65%;
-    min-width: 100px;
+    min-width: 80px;
     border: 2px solid #ff9d22;
     border-radius: 4px;
     padding: 0 7px;
@@ -163,6 +163,10 @@ label { /* ====================== тут треба добавить клас, �
     font-size: 14px;
 }
 
+.very-small-txt {
+    font-size: 12px;
+}
+
 .physiologFt {
     margin-top: 15px;
 }
@@ -172,7 +176,7 @@ label { /* ====================== тут треба добавить клас, �
 }
 
 .header-result {
-    background-image: url("../img/IMG_20200922_003012.jpg");
+    background-image: url("../img/result-bckg-final.jpg");
 }
 
 
