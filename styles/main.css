@@ -150,6 +150,7 @@ label { /* ====================== тут треба добавить клас, �
 .container-result {
     width: 60%;
     margin: 0 auto;
+    line-height: 28px;
 }
 
 
