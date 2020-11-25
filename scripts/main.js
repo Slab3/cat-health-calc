@@ -11,6 +11,10 @@ ButtCalc.onclick = function () {
     let gettingDigestiveSystem = document.getElementById("InputCatDigestiveSystem").options.selectedIndex;
     let gettingBreath = document.getElementById("InputCatBreath").options.selectedIndex;
 
+    //getting text from inputs
+    let gettingEarsText = document.getElementById("InputCatEars").options[gettingEars].text;
+    console.log(gettingEarsText);
+
 
     // ===== ===== ===== if-else. for calculating
     // ===== ===== ===== Name ===== ===== ===== ===== ===== =====-
@@ -23,12 +27,12 @@ ButtCalc.onclick = function () {
         // alert('2 sex');
     }
 
-    // ===== ===== ===== Weight ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Weight ===== ===== ===== ===== ===== =====- weight
     if (gettingWeight < 3) {
         // alert('легесенький...');
     }
 
-    // ===== ===== ===== Length ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Length ===== ===== ===== ===== ===== =====- length
     if (gettingLength > 75) {
         // alert('ого він довгий!');
     }
@@ -48,16 +52,14 @@ ButtCalc.onclick = function () {
     } else if (gettingLength > 20) {
         lngth = 1;
     }
-    document.body.innerHTML = '<p class="result-elem">' + lngth +
-        " проіндексована довжина кота...  а не число" + '</p>';
 
 
-    // ===== ===== ===== birthday ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== birthday ===== ===== ===== ===== ===== =====- birthday
     if (gettingBirthday < "2020-11-01") {
         // alert('вашому коту більше місяця...')
     }
 
-    // ===== ===== ===== weight category (getting selected Index) ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== weight category (getting selected Index) ===== ===== ===== ===== ===== =====- weight category
     if (gettingWeightCtgry === 0) {
         // alert('1 wgth ctgry');
     } else if (gettingWeightCtgry === 1) {
@@ -66,28 +68,28 @@ ButtCalc.onclick = function () {
         // alert('3 wgth ctgry');
     }
 
-    // ===== ===== ===== Nose ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Nose ===== ===== ===== ===== ===== =====- nose
     if (gettingNose === 0) {
         // alert('1 nose');
     } else {
         // alert('2 nose');
     }
 
-    // ===== ===== ===== Ears ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Ears ===== ===== ===== ===== ===== =====- ears
     if (gettingEars === 0) {
         // alert('1 ears');
     } else {
         // alert('2 ears');
     }
 
-    // ===== ===== ===== Breath ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Breath ===== ===== ===== ===== ===== =====- breath
     if (gettingBreath === 0) {
         // alert('1 breath');
     } else {
         // alert('2 breath');
     }
 
-    // ===== ===== ===== Digestive System ===== ===== ===== ===== ===== =====-
+    // ===== ===== ===== Digestive System ===== ===== ===== ===== ===== =====- digestive system
     if (gettingDigestiveSystem === 0) {
         // alert('1 syst');
     } else {
@@ -104,8 +106,104 @@ ButtCalc.onclick = function () {
     //
     //
 
+    // ======================= ------------------------ calculating:
+    let weightResult;
+
+//-=-=-=- категорія БЕЗ ПОРОДИ (11 до 1) - 0 - MALE
+    if (gettingLength / gettingWeight <= 8.7 && gettingSex === 0 && gettingWeightCtgry === 0) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 8.7 && gettingLength / gettingWeight < 13.1 && gettingSex === 0 && gettingWeightCtgry === 0) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 13.1 && gettingSex === 0 && gettingWeightCtgry === 0) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+//-=-=-=- 0 - FEMALE
+    if (gettingLength / gettingWeight <= 9 && gettingSex === 1 && gettingWeightCtgry === 0) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 9 && gettingLength / gettingWeight < 13.4 && gettingSex === 1 && gettingWeightCtgry === 0) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 13.4 && gettingSex === 1 && gettingWeightCtgry === 0) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+
+//-=-=-=- категорія БРИТАНЦІ/ШОТЛАНДЦІ (10 до 1) - 1 - MALE
+    if (gettingLength / gettingWeight <= 8 && gettingSex === 0 && gettingWeightCtgry === 1) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 8 && gettingLength / gettingWeight < 12.3 && gettingSex === 0 && gettingWeightCtgry === 1) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 12.3 && gettingSex === 0 && gettingWeightCtgry === 1) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+//-=-=-=- 1 - FEMALE
+    if (gettingLength / gettingWeight <= 8.3 && gettingSex === 1 && gettingWeightCtgry === 1) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 8.3 && gettingLength / gettingWeight < 12.6 && gettingSex === 1 && gettingWeightCtgry === 1) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 12.6 && gettingSex === 1 && gettingWeightCtgry === 1) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+//-=-=-=- категорія Великі - Мейн-кун... (7 до 1) - 2 - MALE
+    if (gettingLength / gettingWeight <= 6 && gettingSex === 0 && gettingWeightCtgry === 2) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 6 && gettingLength / gettingWeight < 9 && gettingSex === 0 && gettingWeightCtgry === 2) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 9 && gettingSex === 0 && gettingWeightCtgry === 2) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+//-=-=-=- 2 - FEMALE
+    if (gettingLength / gettingWeight <= 6.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
+        weightResult = 'має проблеми з вагою, ожиріння. Постарайтесь більше вигулювати свого улюбленця. ' +
+            'Якщо ви відчуваєте ребра, але не можете їх полічити, кіт має надмірну вагу.';
+    } else if (gettingLength / gettingWeight > 6.3 && gettingLength / gettingWeight < 9.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
+        weightResult = 'має хорошу вагу, та не має потреби в додатковій активності.';
+    } else if (gettingLength / gettingWeight > 9.3 && gettingSex === 1 && gettingWeightCtgry === 2) {
+        weightResult = 'має проблеми з вагою, дуже мала маса. Постарайтесь більше годувати улюбленця. Якщо він не хоче' +
+            ' зверніться до спеціаліста. Можливо в нього проблеми з зубами, або якась інфекція.';
+    }
+
+
+    // alert(weightResult);
+
+
+
+
+
+
+
     // document.write(gettingEars + gettingNose)
     alert('Зараз ви будете переведені на сторінку результатів')
+
+    // dropping result on page:
+    document.body.innerHTML =
+        '<header>' +
+        '   <div class="flex-elem ">' +
+        '       <div class="logo-cont">' +
+        '           <a href="index.html">' +
+        '               <img class="logo" src="img/cat-notebook.png" alt="logo-item">' +
+        '           </a>' +
+        '       </div>' +
+        '       <div class="right-btm-header">' +
+        '           <h2 class="info-head-right result-elem">Це сайт, на якому ви можете визначити, наскільки здоровий ваш кіт</h2>' +
+        '       </div>' +
+        '    </div>' +
+        '</header>' +
+        '<section class="main-page container-result">' +
+        '   <p>' + gettingName + ' ' + weightResult + ' text with result ... ... ... ...' + '</p>' +
+        '   <p>' + 'text with result... ... ... ...' + '</p>' +
+        '   <p>' + 'text with result... ... ... ...' + '</p>' +
+        '   <p>' + 'text with result... ... ... ...' + '</p>' +
+        '</section>'
+    ;
 };
 
 

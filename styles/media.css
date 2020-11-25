@@ -15,6 +15,10 @@
     .cat-health-info {
         width: 100%;
     }
+
+    .container-result {
+        width: 85%;
+    }
 }
 
 @media only screen and (max-width: 580px) {
