@@ -29,7 +29,7 @@
 <section class="main-page container flex-elem">
     <div class="left-main">                         <!-- Left Main -->
         <span class="thx-text">
-            <i>Ваш кіт скаже вам "дякую" за те, що ви турбуєтесь про нього!</i>
+            <i class="txt-inside-span-lft-main">Ваш кіт скаже вам "дякую" за те, що ви турбуєтесь про нього!</i>
         </span>
     </div>
 
@@ -37,7 +37,8 @@
         <form class="" action="">
             <div class="form-item">
                 <label class="" for="InputCatName">Ім'я кота:
-                    <input type="text" maxlength="35" class="form-control" id="InputCatName" name="InputCatName" value="Name">
+                    <input type="text" maxlength="35" class="form-control" id="InputCatName" name="InputCatName"
+                           placeholder="Ім'я кота">
                 </label>
             </div>
 
@@ -52,7 +53,7 @@
 
             <div class="form-item">
                 <label class="" for="InputCatWeight"
-                       title="Сама велика зафіксована вага кота - 21 кг">Вага:
+                       title="Сама велика зафіксована вага кота - 21 кг">Вага <i class="small-txt">(кг)</i>:
                     <input type="number" step="0.1" max="25" onkeypress="this.value=this.value.substring(0,2);"
                            class="form-control" id="InputCatWeight" name="InputCatWeight">
                 </label>
@@ -60,7 +61,7 @@
 
             <div class="form-item">
                 <label class="" for="InputCatLength"
-                       title="Максимальна зафіксована довжина кота - 123 см, це був Мейн-кун">Довжина:
+                       title="Максимальна зафіксована довжина кота - 123 см, це був Мейн-кун">Довжина <i class="small-txt">(см)</i>:
                     <input type="number" max="125" onkeypress="this.value=this.value.substring(0,2);"
                            class="form-control" id="InputCatLength" name="InputCatLength">
                 </label>
@@ -97,7 +98,7 @@
             <div class="form-item">
                 <label class="" for="InputCatEars">Стан вух:
                     <select class="form-control" name="InputCatEars" id="InputCatEars">
-                        <option value="ears1">Холодні</option>
+                        <option value="ears1">Прохолодні</option>
                         <option value="ears2">Гарячі</option>
                     </select>
                 </label>

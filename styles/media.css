@@ -8,6 +8,9 @@
     .cat-health-info {
         width: 85%;
     }
+    form {
+        margin-top: 10px;
+    }
 }
 
 
