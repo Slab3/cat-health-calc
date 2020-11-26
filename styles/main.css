@@ -111,19 +111,19 @@ header {
     margin-top: 15px;
 } .form-item:first-child {margin-top: 0;}
 
-.form-control {  /* input */
+.form-control {         /* input */
     height: 36px;
     width: 65%;
     min-width: 80px;
     border: 2px solid #ff9d22;
     border-radius: 4px;
     padding: 0 7px;
-    float: right; /* робить так, що всі інпути на одній відстані від лейблів. на всю ширину блока*/
+    float: right;       /* make: all inputs on right side from labels */
 } .form-control:hover {
     border-color: red;
 }
 
-label { /* ====================== тут треба добавить клас, і задавать стилі класу... хотя */
+label {
     line-height: 36px;
 }
 

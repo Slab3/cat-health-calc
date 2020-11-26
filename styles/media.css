@@ -25,7 +25,7 @@
 }
 
 @media only screen and (max-width: 580px) {
-    /*падінг коли до кнопки прилазять елементи форми*/
+    /* margin when to button sticks elements of form*/
     .button-form {
         margin-top: 60px;
     }
