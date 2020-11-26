@@ -165,6 +165,7 @@ label {
 
 .very-small-txt {
     font-size: 12px;
+    text-decoration: underline;
 }
 
 .physiologFt {
