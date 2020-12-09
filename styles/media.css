@@ -1,51 +1,33 @@
 @media only screen and (max-width: 1006px) {
 
     /* make calc jumping on bottom form "left-text"*/
-    .main-page {
-        display: block;
-    }
+    .main-page {display: block;}
 
-    .cat-health-info {
-        width: 85%;
-    }
-    form {
-        margin-top: 10px;
-    }
+    .cat-health-info {width: 85%;}
+
+    form {margin-top: 10px;}
 }
 
 
 @media only screen and (max-width: 640px) {
-    .cat-health-info {
-        width: 100%;
-    }
+    .cat-health-info {width: 100%;}
 
-    .container-result {
-        width: 85%;
-    }
+    .container-result {width: 85%;}
 }
 
 @media only screen and (max-width: 580px) {
     /* margin when to button sticks elements of form*/
-    .button-form {
-        margin-top: 60px;
-    }
+    .button-form {margin-top: 60px;}
 
-    .container {
-        width: 85%;
-    }
+    .container {width: 85%;}
 }
 
 @media only screen and (max-width: 475px) {
-    .form-control {
-        width: 55%;
-    }
-    .container {
-        width: 95%;
-    }
+    .form-control {width: 55%;}
+
+    .container {width: 95%;}
 }
 
 @media only screen and (max-width: 350px) {
-    .form-control {
-        width: 48%;
-    }
+    .form-control {width: 48%;}
 }
